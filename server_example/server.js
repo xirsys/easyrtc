@@ -36,7 +36,7 @@ easyrtc.on("getIceConfig", function(connectionObj, callback) {
     },
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            // data.d.iceServers is where the array of ICE servers lives
+            // body.d.iceServers is where the array of ICE servers lives
             iceConfig = body.d.iceServers;  
             console.log(iceConfig);
             callback(null, iceConfig);
