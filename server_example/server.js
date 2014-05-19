@@ -21,7 +21,6 @@ var socketServer = io.listen(webServer, {"log level":1});
 easyrtc.on("getIceConfig", function(connectionObj, callback) {
   
     // This object will take in an array of XirSys STUN and TURN servers
-    // and override the original iceConfig object
     var iceConfig = [];
 
     request.post('https://api.xirsys.com/getIceServers', {
