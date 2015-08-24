@@ -23,7 +23,7 @@ easyrtc.on("getIceConfig", function(connectionObj, callback) {
     // This object will take in an array of XirSys STUN and TURN servers
     var iceConfig = [];
 
-    request.post('https://api.xirsys.com/getIceServers', {
+    request.post('https://service.xirsys.com/ice', {
         form: {
             ident: "< Your username >",
             secret: "< Your secret API token >",
